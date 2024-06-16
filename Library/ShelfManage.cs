@@ -26,7 +26,7 @@ namespace Library
         // Method to update an existing shelf
         public bool UpdateShelf(Shelf shelf)
         {
-            string query = "UPDATE Shelves SET Location = @Location, Description = @Description WHERE ShelfID = @ShelfID";
+            string query = "UPDATE Shelves SET Location = @Location, Description = @Description WHERE Id = @ShelfID";
             var parameters = new Dictionary<string, object>
         {
             {"@ShelfID", shelf.ShelfID},
@@ -43,28 +43,23 @@ namespace Library
         // Method to delete a shelf
         public bool DeleteShelf(int shelfId)
         {
-            string query = "DELETE FROM Shelves WHERE Id = @ShelfID";
+
+          
+            string query = "DELETE FROM Shelves WHERE Id = @ShelfID"; // Ensure the column name is correct in the query
             var parameters = new Dictionary<string, object>
     {
         {"@ShelfID", shelfId}
     };
-            try
-            {
-                int result = DatabaseHelper.ExecutenewNonQuery(query, parameters);
-                return result > 0;
-            }
-            catch (Exception ex)
-            {
-                // Handle or log the exception as needed
-                Console.WriteLine("Error in DeleteShelf: " + ex.Message);
-                return false;
-            }
+            return DatabaseHelper.ExecuteNonQuery(query, parameters) > 0;
         }
+
+
+
 
         // Method to retrieve a shelf by ID
         public Shelf GetShelfById(int shelfId)
         {
-            string query = "SELECT * FROM Shelves WHERE ShelfID = @ShelfID";
+            string query = "SELECT * FROM Shelves WHERE Id = @ShelfID";
             var parameters = new Dictionary<string, object>
         {
             {"@ShelfID", shelfId}
@@ -76,7 +71,7 @@ namespace Library
                 {
                     return new Shelf
                     {
-                        ShelfID = reader.GetInt32(reader.GetOrdinal("ShelfID")),
+                        ShelfID = reader.GetInt32(reader.GetOrdinal("Id")),
                         Location = reader.GetString(reader.GetOrdinal("Location")),
                         Description = reader.GetString(reader.GetOrdinal("Description"))
                     };

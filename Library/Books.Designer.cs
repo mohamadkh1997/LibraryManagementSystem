@@ -80,7 +80,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1204, 283);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // panel4
             // 
@@ -121,7 +120,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(394, 280);
             panel3.TabIndex = 11;
-            panel3.Paint += panel3_Paint;
             // 
             // button2
             // 
@@ -132,7 +130,7 @@
             button2.TabIndex = 16;
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += button2_Click_1;
             // 
             // label8
             // 
@@ -161,7 +159,6 @@
             bookshearch.TabIndex = 10;
             bookshearch.Text = "Search";
             bookshearch.UseVisualStyleBackColor = true;
-            bookshearch.Click += bookshearch_Click;
             // 
             // shelf
             // 
@@ -260,7 +257,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1073, 376);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
             // 
             // Booklist
             // 
@@ -269,7 +265,6 @@
             Booklist.Name = "Booklist";
             Booklist.Size = new Size(1073, 367);
             Booklist.TabIndex = 0;
-            Booklist.CellContentClick += Booklist_CellContentClick;
             // 
             // panel5
             // 
@@ -286,7 +281,6 @@
             Shelflist.Name = "Shelflist";
             Shelflist.Size = new Size(110, 373);
             Shelflist.TabIndex = 0;
-            Shelflist.CellContentClick += Shelflist_CellContentClick;
             // 
             // Books
             // 

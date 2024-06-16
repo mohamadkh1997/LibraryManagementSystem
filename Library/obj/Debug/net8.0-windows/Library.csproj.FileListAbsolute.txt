@@ -73,3 +73,5 @@ C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Libr
 C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Library.Addshelf.resources
 C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Library.BookPlus.resources
 C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Library.ShowBookDetail.resources
+C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Library.sourcelink.json
+C:\Users\Mohammadreza\source\repos\Library\Library\obj\Debug\net8.0-windows\Library.ModifyShelf.resources
